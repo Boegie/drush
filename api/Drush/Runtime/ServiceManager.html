@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Drush\Runtime\ServiceManager | Drush API %version%</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../doctum.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script async defer src="../../js/autocomplete.min.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Drush_Runtime_ServiceManager" data-root-path="../../" data-search-index-url="../../doctum-search.json">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <div class="search-bar hidden" id="search-progress-bar-container">
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" id="search-progress-bar"
+                    aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+        </div>
+        <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   id="doctum-search-auto-complete"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search"
+                   spellcheck="false"
+                   autocorrect="off"
+                   autocomplete="off"
+                   autocapitalize="off">
+            <div class="auto-complete-results" id="auto-complete-results"></div>
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Drush API %version%</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Drush.html">Drush</a></li><li class="backslash">\</li><li><a href="../../Drush/Runtime.html">Runtime</a></li><li class="backslash">\</li><li>ServiceManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ServiceManager    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ServiceManager</strong>        (<a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php">View source</a>)
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Manage Drush services.</p></p>            <p><p>This class manages the various services / plugins supported by Drush.
+The primary examples of these include:</p>
+<ul>
+<li>Command files</li>
+<li>Hooks</li>
+<li>Symfony Console commands</li>
+<li>Command info alterers</li>
+<li>Generators</li>
+</ul>
+<p>Most services are discovered via the PSR-4 discovery mechanism. Legacy
+services are injected into this object by the bootstrap handler
+(DrushBoot8) using the LegacyServiceFinder and LegacyServiceInstantiator
+classes.</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_bootstrapCommandClasses">
+                                        protected                                        string[]
+                                                                                
+                                    </td>
+                <td>$bootstrapCommandClasses</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<abbr title="Composer\Autoload\ClassLoader">ClassLoader</abbr> $autoloader, <a href="../../Drush/Config/DrushConfig.html"><abbr title="Drush\Config\DrushConfig">DrushConfig</abbr></a> $config, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_loadCommandClasses">loadCommandClasses</a>(array $commandClasses)
+        
+                                            <p><p>Ensure that any discovered class that is not part of the autoloader
+is, in fact, included.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_bootstrapCommandClasses">bootstrapCommandClasses</a>()
+        
+                                            <p><p>Return cached of deferred commandhander objects.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discover">discover</a>(array $commandfileSearchpath, string $baseNamespace)
+        
+                                            <p><p>Discover all of the different kinds of command handler objects
+in the places where Drush can find them. Called during preflight;
+some command classes are returned right away, and others are saved
+to be handled later during Drupal bootstrap.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverCommandsFromConfiguration">discoverCommandsFromConfiguration</a>()
+        
+                                            <p><p>Discover commands explicitly declared in configuration.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverCommands">discoverCommands</a>(array $directoryList, string $baseNamespace)
+        
+                                            <p><p>Discovers command classes from a provided search path.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverPsr4Commands">discoverPsr4Commands</a>()
+        
+                                            <p><p>Discover PSR-4 autoloaded classes that implement Annotated Command
+library command handlers.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverPsr4Generators">discoverPsr4Generators</a>()
+        
+                                            <p><p>Discover PSR-4 autoloaded classes that implement DCG generators.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverModuleCommands">discoverModuleCommands</a>(array $directoryList, string $baseNamespace)
+        
+                                            <p><p>Discover module commands. This is the preferred way to find module
+commands in Drush 12+.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverModuleCommandInfoAlterers">discoverModuleCommandInfoAlterers</a>(array $directoryList, string $baseNamespace)
+        
+                                            <p><p>Discover command info alterers in modules.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_instantiateYamlCliCommands">instantiateYamlCliCommands</a>()
+        
+                                            <p><p>Instantiate commands from Grasmash\YamlCli that we want to expose
+as Drush commands.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_instantiateServices">instantiateServices</a>(array $bootstrapCommandClasses, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $drushContainer, <abbr title="Drush\Runtime\Drupal\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>|null $container = null)
+        
+                                            <p><p>Instantiate objects given a lsit of classes. For each class, if it has
+a static <code>create</code> factory, use that to instantiate it, passing both the
+Drupal and Drush DI containers. If there is no static factory, then
+instantiate it via 'new $class'</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_supportsCompoundContainer">supportsCompoundContainer</a>($class, $drush_container)
+        
+                                            <p><p>Determine if the first parameter of the create method supports our container with delegate.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasStaticCreateFactory">hasStaticCreateFactory</a>(string $class)
+        
+                                            <p><p>Check to see if the provided class has a static <code>create</code> method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_bootStrapAttributeValue">bootStrapAttributeValue</a>(string $class)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_requiresBootstrap">requiresBootstrap</a>(string $class)
+        
+                                            <p><p>Check whether a command class requires Drupal bootstrap.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasStaticCreateEarlyFactory">hasStaticCreateEarlyFactory</a>(string $class)
+        
+                                            <p><p>Check to see if the provided class has a static <code>createEarly</code> method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_hasStaticMethod">hasStaticMethod</a>(string $class, string $methodName)
+        
+                                            <p><p>Check to see if the provided class has the specified static method.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_discoverModuleGenerators">discoverModuleGenerators</a>(array $directoryList, string $baseNamespace)
+        
+                                            <p><p>Return generators that ship in modules.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_inflect">inflect</a>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, mixed $object)
+        
+                                            <p><p>Inject any dependencies needed via the &quot;*AwareInterface&quot; pattern</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L54">at line 54</a></div>
+        <code>                    
+    <strong>__construct</strong>(<abbr title="Composer\Autoload\ClassLoader">ClassLoader</abbr> $autoloader, <a href="../../Drush/Config/DrushConfig.html"><abbr title="Drush\Config\DrushConfig">DrushConfig</abbr></a> $config, <abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr> $logger)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Composer\Autoload\ClassLoader">ClassLoader</abbr></td>
+                <td>$autoloader</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Drush/Config/DrushConfig.html"><abbr title="Drush\Config\DrushConfig">DrushConfig</abbr></a></td>
+                <td>$config</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Log\LoggerInterface">LoggerInterface</abbr></td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCommandClasses">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L67">at line 67</a></div>
+        <code>            protected        void
+    <strong>loadCommandClasses</strong>(array $commandClasses)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Ensure that any discovered class that is not part of the autoloader
+is, in fact, included.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$commandClasses</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bootstrapCommandClasses">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L82">at line 82</a></div>
+        <code>                    array
+    <strong>bootstrapCommandClasses</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return cached of deferred commandhander objects.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of class names to instantiate at bootstrap time.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discover">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L100">at line 100</a></div>
+        <code>                    array
+    <strong>discover</strong>(array $commandfileSearchpath, string $baseNamespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover all of the different kinds of command handler objects
+in the places where Drush can find them. Called during preflight;
+some command classes are returned right away, and others are saved
+to be handled later during Drupal bootstrap.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$commandfileSearchpath</td>
+                <td><p>List of directories to search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseNamespace</td>
+                <td><p>The namespace to use at the base of each
+search diretory. Namespace components mirror directory structure.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of command classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverCommandsFromConfiguration">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L125">at line 125</a></div>
+        <code>                    array
+    <strong>discoverCommandsFromConfiguration</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover commands explicitly declared in configuration.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of command classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverCommands">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L151">at line 151</a></div>
+        <code>                    array
+    <strong>discoverCommands</strong>(array $directoryList, string $baseNamespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discovers command classes from a provided search path.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$directoryList</td>
+                <td><p>List of directories to search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseNamespace</td>
+                <td><p>The namespace to use at the base of each
+search directory. Namespace components mirror directory structure.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of command classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverPsr4Commands">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L175">at line 175</a></div>
+        <code>                    array
+    <strong>discoverPsr4Commands</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover PSR-4 autoloaded classes that implement Annotated Command
+library command handlers.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of command classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverPsr4Generators">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L197">at line 197</a></div>
+        <code>                    array
+    <strong>discoverPsr4Generators</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover PSR-4 autoloaded classes that implement DCG generators.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of generator classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverModuleCommands">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L224">at line 224</a></div>
+        <code>                    array
+    <strong>discoverModuleCommands</strong>(array $directoryList, string $baseNamespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover module commands. This is the preferred way to find module
+commands in Drush 12+.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$directoryList</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of command classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverModuleCommandInfoAlterers">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L247">at line 247</a></div>
+        <code>                    array
+    <strong>discoverModuleCommandInfoAlterers</strong>(array $directoryList, string $baseNamespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Discover command info alterers in modules.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$directoryList</td>
+                <td><p>List of directories to search</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseNamespace</td>
+                <td><p>The namespace to use at the base of each
+search directory. Namespace components mirror directory structure.</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instantiateYamlCliCommands">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L268">at line 268</a></div>
+        <code>                    array
+    <strong>instantiateYamlCliCommands</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Instantiate commands from Grasmash\YamlCli that we want to expose
+as Drush commands.</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of Symfony Command objects</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_instantiateServices">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L304">at line 304</a></div>
+        <code>                    array
+    <strong>instantiateServices</strong>(array $bootstrapCommandClasses, <abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $drushContainer, <abbr title="Drush\Runtime\Drupal\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>|null $container = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Instantiate objects given a lsit of classes. For each class, if it has
+a static <code>create</code> factory, use that to instantiate it, passing both the
+Drupal and Drush DI containers. If there is no static factory, then
+instantiate it via 'new $class'</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bootstrapCommandClasses</td>
+                <td><p>Classes to instantiate.</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$drushContainer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Drush\Runtime\Drupal\Component\DependencyInjection\ContainerInterface">ContainerInterface</abbr>|null</td>
+                <td>$container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of instantiated service objects</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_supportsCompoundContainer">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L351">at line 351</a></div>
+        <code>            protected        bool
+    <strong>supportsCompoundContainer</strong>($class, $drush_container)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determine if the first parameter of the create method supports our container with delegate.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$drush_container</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasStaticCreateFactory">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L366">at line 366</a></div>
+        <code>            protected        bool
+    <strong>hasStaticCreateFactory</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check to see if the provided class has a static <code>create</code> method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>The name of the class to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if class has a static <code>create</code> method.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bootStrapAttributeValue">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L374">at line 374</a></div>
+        <code>            protected        int|null
+    <strong>bootStrapAttributeValue</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requiresBootstrap">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L390">at line 390</a></div>
+        <code>            protected        bool
+    <strong>requiresBootstrap</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check whether a command class requires Drupal bootstrap.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasStaticCreateEarlyFactory">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L408">at line 408</a></div>
+        <code>            protected        bool
+    <strong>hasStaticCreateEarlyFactory</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check to see if the provided class has a static <code>createEarly</code> method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>The name of the class to check</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if class has a static <code>createEarly</code> method.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hasStaticMethod">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L422">at line 422</a></div>
+        <code>            protected        bool
+    <strong>hasStaticMethod</strong>(string $class, string $methodName)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Check to see if the provided class has the specified static method.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>The name of the class to check</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$methodName</td>
+                <td><p>The name of the method the class should have</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>True if class has a static method with the specified name.</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_discoverModuleGenerators">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L438">at line 438</a></div>
+        <code>                    array
+    <strong>discoverModuleGenerators</strong>(array $directoryList, string $baseNamespace)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return generators that ship in modules.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$directoryList</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$baseNamespace</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>List of generator classes</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inflect">
+        <div class="location"><a href="https://github.com/drush-ops/drush/blob/12.x/src/Runtime/ServiceManager.php#L458">at line 458</a></div>
+        <code>                    void
+    <strong>inflect</strong>(<abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr> $container, mixed $object)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Inject any dependencies needed via the &quot;*AwareInterface&quot; pattern</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Container\ContainerInterface">ContainerInterface</abbr></td>
+                <td>$container</td>
+                <td><p>The DI contaner</p></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$object</td>
+                <td><p>The object to be inflected</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>
